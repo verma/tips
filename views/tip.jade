@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .container.tip
+    .row
+      .span2.tip-index Tip ##{index}
+      .span6.labels
+        span.label Node.js
+        span.label Style
+      .span4.date #{date} 
+      .row
+        .span10.offset1.tip-content
+          .quote &ldquo;
+          !{content}
+          .quote.bottom &rdquo;
+    .footer
+      .contribution - #{contributed_by}

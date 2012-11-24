@@ -1,0 +1,93 @@
+@import "bootstrap.min.css";
+
+@tipFontSize: 25px;
+@tipFontLineHeight: 30px;
+
+@codeFontSize: 20px;
+@codeFontLineHeight: 25px;
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.tip {
+  .tip-index {
+    color: #777;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 200;
+  }
+
+  .contribution {
+    color: #ddd;
+    text-align: left;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  .tip-content {
+    margin-top: 60px;
+    font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: @tipFontSize;
+    line-height: @tipFontLineHeight;
+    color: #555;
+
+    .quote {
+      font-size: 100px;
+      line-height: 10px;
+      color: #eee;
+
+    }
+    .bottom {
+      text-align: right;
+      line-height: 100px;
+    }
+  }
+
+  .labels {
+    text-align: left;
+    .label {
+      margin-right: 10px;
+      font-weight: 200;
+    }
+  }
+
+  .date {
+    color: #ddd;
+    font-weight: 200;
+    text-align: right;
+  }
+
+  .footer {
+    margin-top: 40px;
+  }
+
+  pre {
+    margin: 20px 0 20px 0;
+    font-size: @codeFontSize;
+    line-height: @codeFontLineHeight;
+  }
+}
+
+.prettyprint {
+  .kwd {
+    color: #336699;
+  }
+
+  .str {
+    color: #990000;
+  }
+}
+
+code {
+  font-size: @tipFontSize;
+}
