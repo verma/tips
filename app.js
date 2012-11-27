@@ -28,6 +28,7 @@ app.configure('development', function(){
 });
 
 app.get('/', tips.index);
+app.get('/tips/new', tips.new);
 app.get('/tips/:id', tips.tip);
 
 http.createServer(app).listen(app.get('port'), function(){

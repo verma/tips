@@ -1,0 +1,134 @@
+@import "bootstrap.min.css";
+
+@import "bootstrap-responsive.min.css";
+.right {
+  text-align: right;
+}
+.code-block {
+  margin: 20px 0 20px 0;
+  font-size: 20px;
+  line-height: 25px;
+}
+.code-block .kwd {
+  color: #336699;
+}
+.code-block .str {
+  color: #990000;
+}
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00B7FF;
+}
+a:hover {
+  text-decoration: none;
+}
+.tip .tip-index {
+  color: #777;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: 200;
+}
+.tip .contribution {
+  color: #ddd;
+  text-align: left;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: right;
+}
+.tip .tip-content {
+  margin-top: 60px;
+  font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 25px;
+  line-height: 30px;
+  color: #555;
+}
+.tip .tip-content .quote {
+  font-size: 100px;
+  line-height: 10px;
+  color: #eee;
+}
+.tip .tip-content .bottom {
+  text-align: right;
+  line-height: 100px;
+}
+.tip .labels {
+  text-align: left;
+}
+.tip .labels .label {
+  margin-right: 10px;
+  font-weight: 200;
+}
+.tip .date {
+  color: #ddd;
+  font-weight: 200;
+  text-align: right;
+}
+.tip .footer {
+  margin-top: 40px;
+}
+pre {
+  margin: 20px 0 20px 0;
+  font-size: 20px;
+  line-height: 25px;
+}
+pre .kwd {
+  color: #336699;
+}
+pre .str {
+  color: #990000;
+}
+.new-tip h1 {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #999;
+  font-weight: 200;
+}
+.new-tip h2 {
+  margin-bottom: 20px;
+  color: #bbb;
+  font-weight: 200;
+  font-size: 15px;
+}
+.new-tip textarea {
+  width: 100%;
+  max-wdith: 100%;
+  resize: vertical;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Menlo,Consolas,Ubuntu Mono,monospace;
+}
+.new-tip .lower {
+  height: 40px;
+}
+.new-tip #tags {
+  float: left;
+  width: 70%;
+}
+.new-tip .actions {
+  float: right;
+}
+.new-tip .actions #counter {
+  text-align: right;
+  padding-right: 10px;
+  position: relative;
+  top: 5px;
+}
+.new-tip .actions #save-tip {
+  float: right;
+}
+.wc-good {
+  color: green;
+}
+.wc-ok {
+  color: orange;
+}
+.wc-bad {
+  color: red;
+}
+code {
+  font-size: 25px;
+}

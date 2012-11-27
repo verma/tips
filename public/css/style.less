@@ -1,4 +1,5 @@
 @import "bootstrap.min.css";
+@import "bootstrap-responsive.min.css";
 
 @tipFontSize: 25px;
 @tipFontLineHeight: 30px;
@@ -6,88 +7,158 @@
 @codeFontSize: 20px;
 @codeFontLineHeight: 25px;
 
+.box-sizing(@boxmodel) {
+	-webkit-box-sizing: @boxmodel;
+	-moz-box-sizing: @boxmodel;
+	box-sizing: @boxmodel;
+}
+
+.right {
+	text-align: right;
+}
+
+.code-block {
+	margin: 20px 0 20px 0;
+	font-size: @codeFontSize;
+	line-height: @codeFontLineHeight;
+
+	.kwd {
+		color: #336699;
+	}
+
+	.str {
+		color: #990000;
+	}
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	padding: 50px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
-  &:hover {
-    text-decoration: none;
-  }
+	color: #00B7FF;
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 .tip {
-  .tip-index {
-    color: #777;
-    text-transform: uppercase;
-    text-align: left;
-    font-weight: 200;
-  }
+	.tip-index {
+		color: #777;
+		text-transform: uppercase;
+		text-align: left;
+		font-weight: 200;
+	}
 
-  .contribution {
-    color: #ddd;
-    text-align: left;
-    font-weight: 200;
-    text-transform: uppercase;
-    text-align: right;
-  }
+	.contribution {
+		color: #ddd;
+		text-align: left;
+		font-weight: 200;
+		text-transform: uppercase;
+		text-align: right;
+	}
 
-  .tip-content {
-    margin-top: 60px;
-    font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    font-size: @tipFontSize;
-    line-height: @tipFontLineHeight;
-    color: #555;
+	.tip-content {
+		margin-top: 60px;
+		font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+		font-size: @tipFontSize;
+		line-height: @tipFontLineHeight;
+		color: #555;
 
-    .quote {
-      font-size: 100px;
-      line-height: 10px;
-      color: #eee;
+		.quote {
+			font-size: 100px;
+			line-height: 10px;
+			color: #eee;
 
-    }
-    .bottom {
-      text-align: right;
-      line-height: 100px;
-    }
-  }
+		}
+		.bottom {
+			text-align: right;
+			line-height: 100px;
+		}
+	}
 
-  .labels {
-    text-align: left;
-    .label {
-      margin-right: 10px;
-      font-weight: 200;
-    }
-  }
+	.labels {
+		text-align: left;
+		.label {
+			margin-right: 10px;
+			font-weight: 200;
+		}
+	}
 
-  .date {
-    color: #ddd;
-    font-weight: 200;
-    text-align: right;
-  }
+	.date {
+		color: #ddd;
+		font-weight: 200;
+		text-align: right;
+	}
 
-  .footer {
-    margin-top: 40px;
-  }
+	.footer {
+		margin-top: 40px;
+	}
 
-  pre {
-    margin: 20px 0 20px 0;
-    font-size: @codeFontSize;
-    line-height: @codeFontLineHeight;
-  }
 }
 
-.prettyprint {
-  .kwd {
-    color: #336699;
-  }
-
-  .str {
-    color: #990000;
-  }
+pre {
+	.code-block;
 }
+
+.new-tip {
+	h1 {
+		text-transform: uppercase;
+		font-size: 20px;
+		color: #999;
+		font-weight: 200;
+	}
+	h2 {
+		margin-bottom: 20px;
+		color: #bbb;
+		font-weight: 200;
+		font-size: 15px;
+	}
+	textarea {
+		width: 100%;
+		max-wdith: 100%;
+		resize: vertical;
+		.box-sizing(border-box);
+		font-family: Menlo,Consolas,Ubuntu Mono,monospace;
+	}
+
+	.lower {
+		height: 40px;
+	}
+
+	#tags {
+		float: left;
+		width: 70%;
+	}
+	.actions {
+		float: right;
+
+		#counter {
+			text-align: right;
+			padding-right: 10px;
+			position:relative;
+			top: 5px;
+		}
+		#save-tip {
+			float: right;
+		}
+	}
+}
+
+.wc-good {
+	color: green;
+}
+
+.wc-ok {
+	color: orange;
+}
+
+.wc-bad {
+	color: red;
+}
+
 
 code {
-  font-size: @tipFontSize;
+	font-size: @tipFontSize;
 }
