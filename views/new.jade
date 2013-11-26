@@ -1,21 +1,25 @@
 extends layout
 
 block scripts
-    script(src='/js/new-tip.js')
+	script(src="/js/Markdown.Converter.js")
+	script(src="/js/Markdown.Sanitizer.js")
+	script(src="/js/Markdown.Editor.js")
+	script(src='/js/new-tip.js')
 
 block content
-    .container.new-tip
-        .row
-            form(method='POST', action='/tips').new-tip.span10.offset1
-                h1 Create a new tip
-                h2 Meta Tip: Try to be brief and concise.
-                textarea(rows=10)#tip-edit.span12
-                .lower
-                    input(type='text')#tags
-                    .actions
-                        span#counter
-                        input(type='submit', value='Save Tip')#save-tip.btn.btn-primary
+	.container.new-tip
+		.row
+			form(method='POST', action='/tips').new-tip.span10.offset1
+				h1 Create a new tip
+				h2 Meta Tip: Try to be brief and concise. Use Markdown.
+				#wmd-button-bar
+				textarea(rows=10)#wmd-input.span12
+				.lower
+					input(type='text', placeholder="Tags")#tags
+					.actions
+						span#counter
+						input(type='submit', value='Save Tip')#save-tip.btn.btn-primary
 
-        .row.tip
-            .span10.offset1.tip-content
+		.row.tip
+			#wmd-preview.span10.offset1.tip-content
 

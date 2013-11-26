@@ -1,6 +1,7 @@
-var doCharCount = function() {
+var doCharCount = function(txt) {
 	var $wc = $("#counter");
-	var len = $("#tip-edit").val().length;
+	var len = txt.length;
+	console.log('len', len);
 	$wc.removeClass();
 	if (len == 0)
 		$wc.html('');
@@ -13,10 +14,19 @@ var doCharCount = function() {
 
 }
 
-$(function() {
-	$("#tip-edit").bind("input propertychange", function() {
-		$(".tip-content").html($("#tip-edit").val());
-		setupPrettyPrint();
-		doCharCount();
-	});
+var converter = Markdown.getSanitizingConverter();
+var editor = new Markdown.Editor(converter);
+
+converter.hooks.chain("postConversion", function (text) {
+	doCharCount(text);
+	return text;
 });
+
+editor.hooks.chain("onPreviewRefresh", function () {
+	setupPrettyPrint();
+});
+
+$(function() {
+	editor.run();
+});
+

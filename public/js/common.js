@@ -1,4 +1,4 @@
 var setupPrettyPrint = function() {
-  $("pre").addClass("prettyprint");
+  $("code").addClass("prettyprint");
   prettyPrint();
 }
