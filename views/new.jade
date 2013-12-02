@@ -8,10 +8,13 @@ block scripts
 
 block content
 	.container.new-tip
-		.row
-			form(method='POST', action='/tips').new-tip.span10.offset1
+		form(method='POST', action='/tips').new-tip.span10.offset1
+			.row
 				h1 Create a new tip
 				h2 Meta Tip: Try to be brief and concise. Use Markdown.
+			.row
+				input(type="text")#tip-title
+			.row
 				#wmd-button-bar
 				textarea(rows=10)#wmd-input.span12
 				.lower

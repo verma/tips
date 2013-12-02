@@ -28,5 +28,8 @@ editor.hooks.chain("onPreviewRefresh", function () {
 
 $(function() {
 	editor.run();
+
+	// start with our tip title focused
+	$("#tip-title").focus();
 });
 
